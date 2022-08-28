@@ -7,11 +7,14 @@
 
 <body>
     <section id="upper-left">
-        <h1 id="date">{{ dates.day }}</h1>
+        <h1 id="date">{{ dates.day }}<sup id="nth">{{ dates.nth }}</sup></h1>
         <h2 id="month">{{ dates.month }} </h2>
         <h3 id="day">{{ dates.year }}</h3>
         <section id="weather">
-            <h1>{{ weather.temp }}</h1>
+            <h1 id="temp_now">{{ weather.temp_now }}º</h1>
+            <h2 id="temp_min_max">{{ weather.temp_min }}º - {{ weather.temp_max }}º</h2>
+            <h3 id="rain_chance">{{ weather.rain_chance }}% chance of rain.</h3>
+            <h4 id="weather-icon" style="background-image:url('/static/img/{{ weather.icon_descriptor }}.png')"></h4>
         </section>
     </section>
     <section id="upper-right">
@@ -20,7 +23,7 @@
     <section id="main-left">
     </section>
     <section id="main-right">
-
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Australia%2FSydney&src=cGhpbC5qLmdvdWdoQGdtYWlsLmNvbQ&src=ZmFtaWx5MDg5OTQ1NzMzMjI1MDcwNDA4MzdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y2xoM3ZvYWV2YzJ1MGM4cXFtM3NyYXYzNGVvcHU2Z3ZAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%2344a703&color=%23D50000&color=%23795548" width="515" height="350" frameborder="0" scrolling="no"></iframe>
     </section>
 </body>
 <footer>

@@ -11,15 +11,16 @@ body {
 
 #upper-left {
     position: absolute;
-    background-color: #000;
+    background-color: rgb(255, 255, 255);
     top: 0px;
     left: 0px;
     width: 285px;
     height: 130px;
-    color: #fff;
+    color: rgb(0, 0, 0);
     padding-left: 0px;
     padding-top: 0px;
     overflow: hidden;
+    border: 1px solid #000;
 }
 
 #upper-left h1 {
@@ -28,6 +29,12 @@ body {
     font-weight: bolder;
     top: 5px;
     left: 5px;
+}
+
+#upper-left sup {
+    font-size: 18pt;
+    font-weight:normal;
+
 }
 
 #upper-left h2 {
@@ -46,12 +53,28 @@ body {
     left: 5px;
 }
 
+#weather {
+    position: absolute;
+    top: 5px;
+    left: 100px;
+}
+
+#weather-icon {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 0px;
+    left:120px
+    
+}
+
 #upper-right {
     position: absolute;
     border: 1px solid #000;
     left: 285px;
-    height: 130px;
-    width: 515px;
+    height: 110px;
+    width: 495px;
+    padding: 10px;
 }
 
 #main-left {
