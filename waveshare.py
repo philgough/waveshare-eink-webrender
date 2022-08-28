@@ -116,6 +116,15 @@ def index():
     response = requests.get(url)
     open("cal.ics", "wb").write(response.content)
     # print(cal_from_file('cal.ics'))
-    
-    return render_template('index.html', dates=dates, verse=verse, weather=weather, )
+    cal = cal_from_file('cal.ics')
+    # print(cal.events)
+
+    events = []
+    for e in list(cal.timeline.start_after(datetime.now().astimezone())):
+        print("Event '{}' starting {}".format(e.name, e.begin.humanize()))
+        events.append({
+            'name': e.name,
+            'h_begin': e.begin.humanize()
+        })
+    return render_template('index.html', dates=dates, verse=verse, weather=weather, events=events, len_events=len(events))
 
