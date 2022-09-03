@@ -4,23 +4,25 @@
 }
 
 body {
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 800px;
     height: 480px;
 }
 
 #upper-left {
     position: absolute;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     top: 0px;
     left: 0px;
     width: 285px;
-    height: 130px;
-    color: rgb(0, 0, 0);
+    height: 145px;
+    /* color: rgb(0, 0, 0); */
     padding-left: 0px;
     padding-top: 0px;
     overflow: hidden;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
+    border-bottom: 4px double black;
 }
 
 #upper-left h1 {
@@ -33,8 +35,7 @@ body {
 
 #upper-left sup {
     font-size: 18pt;
-    font-weight:normal;
-
+    font-weight: normal;
 }
 
 #upper-left h2 {
@@ -63,33 +64,87 @@ body {
     position: absolute;
     width: 45px;
     height: 45px;
-    top: 0px;
-    left:120px
-    
+    top: 15px;
+    left: 120px;
+    background-position: 0%;
+    background-size: cover;
 }
 
 #upper-right {
     position: absolute;
-    border: 1px solid #000;
     left: 285px;
-    height: 110px;
+    height: 145px;
     width: 495px;
-    padding: 10px;
+    margin: auto;
+    border-bottom: 4px double black;
+}
+
+#upper-right p {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
 }
 
 #main-left {
+    padding: 5px;
     position: absolute;
-    border: 1px solid #000;
-    top: 130px;
-    width: 285px;
-    height: 350px;
+    /* border: 1px solid #000; */
+    top: 145px;
+    width: 185px;
+    height: 325px;
+    border-right: black 5px double;
+    padding: 0 5px;
 }
 
 #main-right {
+    padding: 5px;
     position: absolute;
-    border: 1px solid #000;
-    top: 130px;
-    left: 285px;
-    width: 515px;
-    height: 350px;
+    /* border: 1px solid #000; */
+    top: 145px;
+    left: 210px;
+    width: 560px;
+    height: 325px;
+    overflow: hidden;
+}
+
+#main-left li {
+    margin-top: 10px;
+}
+
+#main-right li {
+    margin-top: 8px;
+}
+
+.tab {
+    margin-left: 10px;
+}
+
+#main-left h1 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+#main-right h1 {
+    margin-top: 5px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+#verse-text {
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 50%;
+}
+
+#verse-ref {
+    text-align: right;
+    top: 90%;
+}
+
+#verse-container {
+    margin: auto;
 }

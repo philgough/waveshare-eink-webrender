@@ -18,17 +18,31 @@
         </section>
     </section>
     <section id="upper-right">
-        <p id="verse-text">{{ verse.text }} ({{ verse.reference }})</p>
+        <p id="verse-text"> {{ verse.text }}
+
+        </p>
+        <p id="verse-ref">({{ verse.reference }})
+        </p>
     </section>
     <section id="main-left">
-    </section>
-    <section id="main-right">
         <h1>Coming up...</h1>
         <ul>
 
             {% for i in range(0, len_events) %}
 
-            <li>{{ events[i].name }}, starting {{ events[i].h_begin }}</li>
+            <li><strong>{{ events[i].name }}</strong>
+                <br /> <span class="tab">on a {{ events[i].begin }} {{ events[i].h_begin }}</span></li>
+            {%endfor%}
+
+        </ul>
+    </section>
+    <section id="main-right">
+        <h1>News</h1>
+        <ul>
+
+            {% for i in range(0, len_news) %}
+
+            <li>{{ news[i] }}</li>
             {%endfor%}
 
         </ul>
