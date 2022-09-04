@@ -11,10 +11,15 @@
         <h2 id="month">{{ dates.month }} </h2>
         <h3 id="day">{{ dates.year }}</h3>
         <section id="weather">
-            <h1 id="temp_now">{{ weather.temp_now }}º</h1>
+            <h1 id="temp_now">{{ weather.temp_now }}º now</h1>
             <h2 id="temp_min_max">{{ weather.temp_min }}º - {{ weather.temp_max }}º</h2>
-            <h3 id="rain_chance">{{ weather.rain_chance }}% chance of rain.</h3>
-            <h4 id="weather-icon" style="background-image:url('/static/img/{{ weather.icon_descriptor }}.png')"></h4>
+            <!-- <h3 id="rain_chance">{{ weather.rain_chance }}% chance of rain.</h3>
+            <h3>{{ weather.short_text }}</h3> -->
+            <h3>
+                {{ weather.extended_text }}
+            </h3>
+            <h4 id="weather-icon" style="background-image:url('/static/img/{{ weather.icon_descriptor }}.png')">
+            </h4>
         </section>
     </section>
     <section id="upper-right">

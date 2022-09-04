@@ -144,13 +144,26 @@ def index():
     obs = w.observations()
     today = w.forecasts_daily()[0]
 
-    weather = {
-        'temp_now': today['now']['temp_now'],
-        'rain_chance': today['rain']['chance'],
-        'temp_min': today['temp_min'],
-        'temp_max': today['temp_max'],
-        'icon_descriptor': today['icon_descriptor']
-    }
+    if today['temp_min'] is not None:
+        weather = {
+            'temp_now': today['now']['temp_now'],
+            'rain_chance': today['rain']['chance'],
+            'temp_min': today['temp_min'],
+            'temp_max': today['temp_max'],
+            'icon_descriptor': today['icon_descriptor'],
+            'short_text':today['short_text'],
+            'extended_text': today['extended_text']
+        }
+    else:
+        weather = {
+            'temp_now': today['now']['temp_now'],
+            'rain_chance': today['rain']['chance'],
+            'temp_min': today['now']['temp_now'],
+            'temp_max': today['temp_max'],
+            'icon_descriptor': today['icon_descriptor'],
+            'short_text':today['short_text'],
+            'extended_text': today['extended_text']
+        }
 
     print(weather)
     url =''
