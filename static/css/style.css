@@ -32,6 +32,9 @@ body {
     top: 5px;
     left: 5px;
 }
+#weather h1 {
+    font-size: 18pt
+}
 
 #upper-left sup {
     font-size: 18pt;
@@ -46,6 +49,11 @@ body {
     left: 5px;
 }
 
+#weather h2{
+    font-size:18pt
+}
+
+
 #upper-left h3 {
     position: relative;
     font-size: 12pt;
@@ -54,10 +62,14 @@ body {
     left: 5px;
 }
 
+#weather h3 {
+    font-size: 10pt
+}
+
 #weather {
     position: absolute;
     top: 5px;
-    left: 100px;
+    left: 80px;
 }
 
 #weather-icon {
@@ -81,8 +93,8 @@ body {
 
 #upper-right p {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* left: 50%; */
+    transform: translate(-50%, -45%);
     width: 95%;
 }
 
@@ -104,7 +116,7 @@ body {
     top: 145px;
     left: 210px;
     width: 560px;
-    height: 325px;
+    height: 320px;
     overflow: hidden;
 }
 
