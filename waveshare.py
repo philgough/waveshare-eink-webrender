@@ -123,9 +123,10 @@ def index():
     dates={ 'day': datetime.now().day,
             'nth': nth(datetime.now().day % 10),
             'month': datetime.now().strftime("%b"),
-            'year': datetime.now().year
+            'year': datetime.now().year,
+            'time': datetime.now().strftime("%H:%M")
     }
-
+    print(dates['time'])
 
 
     # options = { method: 'GET', headers: { Accept: 'application/json' } };
