@@ -49,7 +49,7 @@ def cal_from_file(filename: str, prodid: str = 'PRODID:-//placeholder//text//EN\
 bearer_token = ''
 with open('twitter.txt') as t_file:
     bearer_token = t_file.readline().strip()
-    print(bearer_token)
+    # print(bearer_token)
 
 def create_url(list_id):
 # Tweet fields are adjustable.
@@ -80,7 +80,7 @@ def bearer_oauth(r):
 
 def connect_to_endpoint(url, list_fields):
     response = requests.request("GET", url, auth=bearer_oauth, params=list_fields)
-    print(response.status_code)
+    # print(response.status_code)
     if response.status_code != 200:
         raise Exception(
             "Request returned an error: {} {}".format(
@@ -126,7 +126,7 @@ def index():
             'year': datetime.now().year,
             'time': datetime.now().strftime("%H:%M")
     }
-    print(dates['time'])
+    # print(dates['time'])
 
 
     # options = { method: 'GET', headers: { Accept: 'application/json' } };
@@ -138,7 +138,7 @@ def index():
     }
 
     w = api.WeatherApi(search='strathfield+nsw', debug=0)
-    print(w)
+    # print(w)
     location = w.location()
 
     obs = w.observations()
@@ -165,7 +165,7 @@ def index():
             'extended_text': today['extended_text']
         }
 
-    print(weather)
+    # print(weather)
     url =''
     with open('cal_url.txt', 'r') as f:
         url=f.readline().strip()
@@ -178,7 +178,7 @@ def index():
 
     events = []
     for e in list(cal.timeline.start_after(datetime.now().astimezone())):
-        print(e.begin.weekday())
+        # print(e.begin.weekday())
         # print("Event '{}' starting {}".format(e.name, e.begin.humanize()))
         events.append({
             'name': e.name,
@@ -187,32 +187,6 @@ def index():
         })
 
     ## twitter
-    # list_id = 1565329082333954048
-
-    # url = "https://api.twitter.com/2/lists/{}".format(id)
-    
-    # search_url = "https://api.twitter.com/2/tweets/search/recent"
-
-    # Optional params: start_time,end_time,since_id,until_id,max_results,next_token,
-    # expansions,tweet.fields,media.fields,poll.fields,place.fields,user.fields
-    # query_params = {'query': '(from:twitterdev -is:retweet) OR #twitterdev','tweet.fields': 'author_id'}
-    # search_url =  'https://api.twitter.com/1.1/trends/closest.json'
-    # query_params = {'query': 'lat=37.781157,long=-122.400612831116'}
-
-    # tweet = requests.get(search_url, auth=bearer_oauth, params=query_params)
-    # print(tweet.status_code)
-    # if tweet.status_code != 200:
-    #     raise Exception(tweet.status_code, tweet.text)
-
-    # print(tweet.text)
-    
-    # return response.json()
-    # json_response = response.json()
-    # json_response = connect_to_endpoint(search_url, query_params)
-    # print(json.dumps(json_response, indent=4, sort_keys=True))
-    
-    # print(search_url)
-
     waveshare_twitter_list_id = '1565329082333954048'
     url, list_fields = create_url(waveshare_twitter_list_id)
     json_response = connect_to_endpoint(url, list_fields)
