@@ -22,7 +22,7 @@ body {
     padding-top: 0px;
     overflow: hidden;
     /* border: 1px solid #000; */
-    border-bottom: 4px double black;
+    /* border-bottom: 4px double black; */
 }
 
 #upper-left h1 {
@@ -88,7 +88,7 @@ body {
     height: 145px;
     width: 495px;
     margin: auto;
-    border-bottom: 4px double black;
+    /* border-bottom: 4px double black; */
 }
 
 #upper-right p {
@@ -105,7 +105,7 @@ body {
     top: 145px;
     width: 185px;
     height: 325px;
-    border-right: black 5px double;
+    /* border-right: black 5px double; */
     padding: 0 5px;
 }
 
@@ -159,4 +159,12 @@ body {
 
 #verse-container {
     margin: auto;
+}
+
+hr {
+    position: absolute;
+    width:800px;
+    size: 2px;
+    color:black;
+    top:150px;
 }
