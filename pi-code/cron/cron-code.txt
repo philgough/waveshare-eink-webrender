@@ -1,0 +1,5 @@
+# update waveshare display every 30 hour at 30 minutes pas the hour
+*/30 * * * * /usr/bin/python3 /home/pi/e-Paper/waveshare/script/waveshare-display-noclear.py
+
+# clear the dispaly every day before 3am
+57 2 * * * /usr/bin/python3 /home/pi/e-Paper/waveshare/script/waveshare-display-clear.py
