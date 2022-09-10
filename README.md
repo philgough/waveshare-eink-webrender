@@ -10,8 +10,11 @@ You will need to include:
 - **cal_url.txt** this file contains the url of the calendar to read. It's set up to read from iCloud, but you need to change `webcal://[url]` to `https://[url]` for it to work
 
 Run the flask server:
-```export FLASK_APP=waveshare.py
-flask run -host=0.0.0.0```
+
+```
+export FLASK_APP=waveshare.py
+flask run -host=0.0.0.0
+```
 
 
 ## Running the client
