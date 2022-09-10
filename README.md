@@ -32,3 +32,5 @@ The two scripts that are added to your crontab will be `waveshare-display-noclea
 The other script, `pi-code/waveshare/script/waveshare-display.py`, does both a clear and an update, but is slower, and not necessary every 30 minutes. 
 
 You should also make `pi-code/waveshare/script/waveshare-display-clear.py` and `pi-code/waveshare/script/waveshare-display-noclear.py` executable by running `chmod +x myscript.py`.
+
+You may also have to install `xvfb` using `sudo apt-get install xvfb` on your Pi. 
