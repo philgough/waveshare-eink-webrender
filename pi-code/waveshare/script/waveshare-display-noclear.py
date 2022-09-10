@@ -26,7 +26,12 @@ options = {
     'crop-h':480,
     'crop-w':800
 }
-imgkit.from_url('http://192.168.0.22:5000', os.path.join(picdir, 'out.bmp'), options=options)
+
+url = ''
+with open('local_url.txt', 'r') as url_f:
+    url = url_f.readline().strip()
+
+imgkit.from_url(url, os.path.join(picdir, 'out.bmp'), options=options)
 
 print('start to try')
 
