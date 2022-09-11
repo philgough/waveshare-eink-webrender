@@ -98,7 +98,10 @@ def connect_to_endpoint(url, list_fields):
 app = Flask(__name__)
 
 def nth(d):
-    if d == 1:
+    if d == 11 or d == 12 or d == 13:
+        return 'th'
+
+    elif d == 1:
         return 'st'
     elif d == 2:
         return 'nd'
@@ -116,12 +119,12 @@ def index():
 
 
 
-    day = str(datetime.now().day) + nth(datetime.now().day % 10)
+    day = str(datetime.now().day) + nth(datetime.now().day)
     
 
 
     dates={ 'day': datetime.now().day,
-            'nth': nth(datetime.now().day % 10),
+            'nth': nth(datetime.now().day),
             'month': datetime.now().strftime("%b"),
             'year': datetime.now().year,
             'time': datetime.now().strftime("%H:%M")

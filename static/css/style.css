@@ -8,6 +8,7 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 800px;
     height: 480px;
+    font-size: 16px;
 }
 
 #upper-left {
@@ -15,7 +16,7 @@ body {
     /* background-color: rgb(255, 255, 255); */
     top: 0px;
     left: 0px;
-    width: 285px;
+    width: 300px;
     height: 145px;
     /* color: rgb(0, 0, 0); */
     padding-left: 0px;
@@ -37,7 +38,7 @@ body {
 }
 
 #upper-left sup {
-    font-size: 18pt;
+    font-size: 22pt;
     font-weight: normal;
 }
 
@@ -46,7 +47,7 @@ body {
     font-size: 26pt;
     font-weight: normal;
     top: 8px;
-    left: 5px;
+    left: 11px;
 }
 
 #weather h2{
@@ -57,36 +58,36 @@ body {
 #upper-left h3 {
     position: relative;
     font-size: 12pt;
-    font-weight: lighter;
+    font-weight: normal;
     top: 12px;
-    left: 5px;
+    left: 11px;
 }
 
 #weather h3 {
-    font-size: 10pt
+    font-size: 10pt;
 }
 
 #weather {
     position: absolute;
     top: 5px;
-    left: 80px;
+    left: 95px;
 }
 
 #weather-icon {
     position: absolute;
     width: 45px;
     height: 45px;
-    top: 15px;
-    left: 120px;
+    top: 5px;
+    left: 100px;
     background-position: 0%;
     background-size: cover;
 }
 
 #upper-right {
     position: absolute;
-    left: 285px;
+    left: 300px;
     height: 145px;
-    width: 495px;
+    width: 480px;
     margin: auto;
     /* border-bottom: 4px double black; */
 }
@@ -107,6 +108,7 @@ body {
     height: 325px;
     /* border-right: black 5px double; */
     padding: 0 5px;
+    overflow: hidden;
 }
 
 #main-right {
@@ -126,6 +128,7 @@ body {
 
 #main-right li {
     margin-top: 8px;
+    font-size: 18px;
 }
 
 .tab {
@@ -164,7 +167,7 @@ body {
 hr {
     position: absolute;
     width:800px;
-    size: 2px;
+    border: 1px solid black;
     color:black;
     top:150px;
 }
